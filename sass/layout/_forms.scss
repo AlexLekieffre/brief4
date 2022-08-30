@@ -1,0 +1,61 @@
+form {
+    font-family: 'Maitree', serif;
+    display: flex;
+    flex-direction: column;
+    max-width:700px;
+    width:100%;
+    margin-bottom:200px;
+
+    input, textarea {
+        font-family: 'Maitree', serif;
+        width:100%;
+        margin: 5px 0;
+        outline-style:none;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        align-self:flex-end;
+        border:none;
+        background-color: white;
+        font-weight: bold;
+        cursor:pointer;
+        margin-right:0;
+        padding-right:0;
+
+        &:hover {
+            color:$color-fond-clair;  
+        }
+    }
+
+    .cta { /*Bouton d'appel à l'action sur la page contact et article*/
+        background-color: #1C212E;
+        color: #fff;
+        width: 230px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #404a64;
+            color: #fff;
+        }
+    }
+
+    .secondaire {
+        background-color: #E5E5E5;
+        color: #303030;
+        width: 230px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;      
+
+        &:hover {
+            background-color: #d8d8d8;
+        }
+    }
+}

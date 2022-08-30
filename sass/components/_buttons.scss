@@ -1,0 +1,48 @@
+.arrow_up {
+    background-color: $color-fond-clair;
+    color:$color-fond-fonce;
+    position: fixed;
+    text-align: center;
+    font-size:0.7rem;
+    height:2rem; 
+    width:2rem;
+    border-radius: 1rem;
+    right:20px;
+    bottom: 20px;
+    cursor: pointer;
+    
+    transition: ease all 0.2s;  
+            
+    &:hover {
+        filter: drop-shadow(0 0 0.75rem $color-fond-fonce);
+    }
+
+    &:visited {
+        color:$color-fond-fonce;
+    }
+}
+
+.save { /*Petit pouton sur la page produit pour enregistrer les articles*/
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #E5E5E5;
+    i {
+        color: #1C212E;
+    }
+}
+
+.cta { /*Bouton d'appel à l'action sur la page contact et article*/
+    background-color: #1C212E;
+    color: #fff;
+    //width: 230px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+
+    &:hover {
+        background-color: #404a64;
+        color: #fff;
+    }
+}

@@ -1,0 +1,38 @@
+.sav {
+    padding: 40px;
+    display: flex;
+    align-content: flex-start ;
+    margin: 50px auto 10px auto;
+    gap: 100px;
+
+    p {
+        margin:25px 0;
+
+        a {
+            font-size: 1.2em;
+            background-color: rgb(23, 177, 120);
+            padding:10px 20px;
+            text-decoration: none;
+            color:$color-fond-fonce;
+            border-radius: 10px;
+            transition: background-color 0.2s;
+
+            strong {
+                color:$color-fond-fonce;
+            }
+            
+            &:hover {
+                background-color: rgb(24, 201, 136);
+            }
+        }
+    }
+    
+    i {
+        color:$color-fond-fonce;       
+    }
+    
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        gap:20px;
+    }
+}

@@ -1,0 +1,37 @@
+.contact {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:25px;
+    width: 70%;
+
+    h2 {
+        margin:5px;
+    }
+
+    .contact-input { /*Pour personnaliser les input*/
+        box-sizing: border-box;
+        border:none;
+        border-bottom: #1C212E 1px solid ;
+        margin: 10px 0;
+
+        &:hover {
+            color: #1C212E;
+            border-bottom: #1C212E 2px solid;
+        }
+    }
+
+    .boutons-contact { /*Pour placer les boutons*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        button {
+            width:100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+    }
+} 

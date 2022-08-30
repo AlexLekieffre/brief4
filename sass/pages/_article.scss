@@ -1,0 +1,39 @@
+.produit {
+    display: flex;
+    position: relative;
+    //text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 50px;
+
+    }
+    //Apparence du texte
+    .resume {
+        width: 400px;
+        color: #303030;
+    }
+
+    .tailor, .price {
+        color: #303030;
+        font-weight: 600;
+        font-size: 1.4em;
+    }
+    .boutons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        
+    }
+
+    @media screen and (max-width: 800px) {
+       .produit {
+           flex-direction: column;
+           padding: 10px;
+           gap: 0;
+           img {
+               max-width: 80%;
+               margin: 0 10%;
+           }
+       }
+    }

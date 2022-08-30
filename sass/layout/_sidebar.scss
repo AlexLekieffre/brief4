@@ -1,0 +1,195 @@
+.wrapper {
+    background-color: $color-sidebar;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $color-fond-fonce;
+
+    .close {
+        display: none;
+        width: 70%;
+        font-size:2rem;
+        cursor:pointer;
+    }
+
+    .sidebartitle {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+        //align-items: center;
+
+        h1 {
+            padding: 0;
+            margin: 20px 0 0 0;
+            font-size: 5vw;
+            text-overflow: none;
+            text-align: left;
+            font-weight: lighter;
+        }
+    
+        h2 {
+            margin: 0 0 40px 0;
+            padding: 0;
+            font-size: 2vw;
+            font-weight: lighter;
+        }    
+    }
+
+    .sidebarcentral {
+        display: flex;
+        flex-direction: column;
+        //height: 40%;
+        width: 70%;
+        margin: 0 auto;
+        color: $color-fond-fonce;
+
+        ul {
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            font-size: 2vw;
+            text-align: left;
+            text-decoration: none;
+
+            a {
+                text-decoration: none;
+                color: $color-fond-fonce;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) scaleX(0);
+                    transform-origin: 50% 50%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-fond-fonce;
+                    transition: transform 450ms;
+                }
+
+                &:hover {
+    
+                    &::after {
+                      transform: translateX(-50%) scaleX(1);
+                    }
+                    
+                  }
+            }
+        }
+
+        .map-responsive {
+            margin:0 auto;
+
+            iframe {
+                width: 100%;
+                height: 100%;               
+            }
+        }
+    }
+
+    .social {
+        width: 70%;
+        margin: 20px auto 0 auto;
+        //margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+            font-size: 2.5vw;
+            transition: ease all 0.2s;  
+            
+            &:hover {
+                filter: drop-shadow(0 0 0.75rem $color-fond-fonce);
+            }
+        }
+
+        a, a:hover {
+            color: $color-fond-fonce;
+        }
+    }
+}
+
+// @media screen and (max-width: 1000px) {
+//     .wrapper {
+//         .sidebartitle {
+//             margin-left: 0;
+//         }
+
+//         .sidebarcentral {
+//             margin-left: 0;            
+//         }
+
+//         .social {
+//             margin-left: 0;               
+//         }
+//     }
+// }
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        height: 60%;
+        width: 100%;
+        position: fixed;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        border-radius: 20% 20% 0 0;
+        justify-content: space-around;
+        align-items: center;
+        visibility:hidden;
+
+        .close {
+            display: flex;
+            justify-content: right;
+        }
+
+        .sidebartitle {
+            display:none;
+        }
+
+        .sidebarcentral {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            ul {
+                margin-right:10px;
+            }
+
+            .map-responsive {
+                margin:0;
+            }
+        }
+
+        .sidebarcentral ul li {
+            font-size:1.5rem;
+        }
+
+        .social {
+            margin: 0 auto;
+        }
+
+        .social i {
+            font-size:2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .wrapper {
+        visibility:visible;
+    }
+}
